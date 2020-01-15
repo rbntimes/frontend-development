@@ -1,0 +1,41 @@
+footer {
+  background: black;
+  padding: 2rem;
+  color: white;
+  grid-column: 1 / 4;
+  grid-row: 3 / 4;
+  width: 100%;
+align-self: center;
+justify-self: center;
+}
+
+footer a, footer p {
+  color: white;
+}
+
+footer > nav {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+footer > svg {
+  fill: white;
+}
+
+footer > nav > ul {
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+footer > nav > ul > li {
+  margin-right: 0.5rem;
+}
+
+footer {
+  color: rgba(255, 255, 255, 0.6);
+}

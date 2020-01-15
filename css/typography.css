@@ -1,0 +1,65 @@
+h1 {
+  font-size: 3rem;
+  margin: 1.5rem 0 1.75rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-family: serif;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  text-align: left;
+}
+
+h3 {
+  color: rgba(0, 0, 0, 0.84);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+h4 {
+}
+
+p {
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, 0.54);
+  line-height: 1.9rem;
+}
+
+mark {
+  background-color: rgba(12, 242, 143, 0.2);
+}
+
+blockquote {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+/* Form typography */
+
+form > h3 {
+  font-family: serif;
+  font-size: 2rem;
+}
+
+form > p {
+  text-align: center;
+}
+
+form > label, form > span, form > p {
+  font-size: 1rem;
+}
+
+/* /Form typography */
+
+a {
+  /* color: white; */
+  text-decoration: none;
+}
