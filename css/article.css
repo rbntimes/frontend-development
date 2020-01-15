@@ -23,9 +23,9 @@ header {
 main {
   grid-column: 2 / 3;
   grid-row: 2 / 3;
-}
-
-article {
+  max-width: 55rem;
+  align-self: center;
+  justify-self: center;
 }
 
 main > article > pre {

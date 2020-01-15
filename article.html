@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/footer.css">
   <link rel="stylesheet" href="css/article.css">
   <link rel="stylesheet" href="css/form.css">
-  <!-- <link rel="author" href="humans.txt"> -->
 </head>
 
 <body>
@@ -26,81 +25,124 @@
           </svg>
         </a>
       </li>
-
       <li><button>Get started</button></li>
-
     </ul>
   </nav>
 
-  <!-- Main content -->
   <main>
-
     <article>
       <header>
         <h1>Get smarter about what matters to you.</h1>
       </header>
 
-      <p>In this article I want to show you the differences between functional and class components
-        in React and when you should choose which one.</p>
-      <p>But first let me give you a brief introduction to React components from the documentation:
+      <p>
+        In this article I want to show you the differences between functional and class components
+        in React and when you should choose which one.
       </p>
-      <p>The simplest way to define a component in React is to write a JavaScript function:</p>
+      <p>
+        But first let me give you a brief introduction to React components from the documentation:
+      </p>
+      <p>
+        The simplest way to define a component in React is to write a JavaScript function:
+      </p>
 
       <pre>function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
-</pre>
+}</pre>
 
-      <p>It’s just a function which accepts props and returns a React element.<br />
+      <p>
+        It’s just a function which accepts props and returns a React element.<br />
         But you can also use the ES6 class syntax to write components.
       </p>
+
       <pre>class Welcome extends React.Component {
   render() {
     return <h1>Hello, {this.props.name}</h1>;
   }
 }</pre>
-      <p>Both versions are equivalent and will give you the exact same output.
+
+      <p>
+        Both versions are equivalent and will give you the exact same output.
         Now you might ask yourself: <i>“When should I use a function and when a class?”</i>
       </p>
 
-
-      <h2> Differences between functional and class-Components</h2>
+      <h2>Differences between functional and class-Components</h2>
       <h3>Syntax</h3>
-      <p>The most obvious one difference is the syntax. A functional component is just a plain
-        JavaScript function which accepts props as an argument and returns a React element.</p>
-      <p>A class component requires you to extend from React.Component and create a render function
+      <p>
+        The most obvious one difference is the syntax. A functional component is just a plain
+        JavaScript function which accepts props as an argument and returns a React element.
+      </p>
+      <p>
+        A class component requires you to extend from React.Component and create a render function
         which returns a React element. This requires more code but will also give you some benefits
-        which you will see later on.</p>
-      <p>If you take a look at the transpiled code by Babel you will also see some major
+        which you will see later on.
+      </p>
+      <p>
+        If you take a look at the transpiled code by Babel you will also see some major
         differences:
       </p>
 
-      <!-- This took longer than it needed to take, next will be a screenshot -->
-      <div><svg heigth="400">
+      <!-- This took longer than it needed to take, next time it will be a screenshot -->
+      <div>
+        <svg heigth="400">
           <circle r="5" fill="red" cy="20" cx="20" />
           <circle r="5" fill="yellow" cy="20" cx="35" />
           <circle r="5" fill="green" cy="20" cx="50" />
           <g>
-            <text x="20" y="60" fill="#BD8EDE">function</text><text fill="white" x="80"
-              y="60">Welcome(props) {
+            <text x="20" y="60" fill="#BD8EDE">
+              function
             </text>
-            <g><text fill="#BD8EDE" x="40" y="80">return </text><text fill="#7BA5E9" x="90"
-                y="80">_react2</text><text x="140" y="80" fill="white">.</text><text fill="#7CC0A6"
-                x="145" y="80">default</text><text x="190" y="80" fill="white">.</text><text
-                fill="#7CC0A6" x="195" y="80">createElement</text><text x="293" y="80"
-                fill="white">(</text></g>
-            <text fill="#ABCA82" x="60" y="100">'h1'</text><text x="84" y="100"
-              fill="white">,</text>
-            <text fill="#E17067" x="60" y="120">null</text><text x="84" y="120"
-              fill="white">,</text>
-            <text fill="#ABCA82" x="60" y="140">'Hello, '</text><text x="110" y="140"
-              fill="white">,</text>
+            <text fill="white" x="80" y="60">
+              Welcome(props) {
+            </text>
+            <g>
+              <text fill="#BD8EDE" x="40" y="80">
+                return
+              </text>
+              <text fill="#7BA5E9" x="90" y="80">
+                _react2
+              </text>
+              <text x="140" y="80" fill="white">.</text>
+              <text fill="#7CC0A6" x="145" y="80">
+                default
+              </text>
+              <text x="190" y="80" fill="white">.</text>
+              <text fill="#7CC0A6" x="195" y="80">
+                createElement
+              </text>
+              <text x="293" y="80" fill="white">
+                (
+              </text>
+            </g>
+            <text fill="#ABCA82" x="60" y="100">'h1'</text>
+            <text x="84" y="100" fill="white">,</text>
+            <text fill="#E17067" x="60" y="120">null</text>
+            <text x="84" y="120" fill="white">,</text>
+            <text fill="#ABCA82" x="60" y="140">'Hello, '</text>
+            <text x="110" y="140" fill="white">,</text>
             <text fill="#7CC0A6" x="60" y="160">props.name</text>
             <text fill="white" x="40" y="180">);</text>
             <text fill="white" x="20" y="200">}</text>
           </g>
-        </svg></div>
-    </article>
+        </svg>
+      </div>
 
+      <p>
+        Because a functional component is just a plain JavaScript function, you cannot use
+        setState() in your component.
+        That’s the reason why they also get called functional stateless components. So everytime you
+        see a functional component you can be sure that this particular component doesn’t have its
+        own state.
+      </p>
+
+      <p>
+        <mark>
+          If you need a state in your component you will either need to create a class
+          component or you lift the state up to the parent component and pass it down the functional
+          component via props.
+        </mark>
+      </p>
+    </article>
   </main>
 
   <footer>
@@ -113,7 +155,7 @@
       <ul>
         <li><a href="#">Get started</a></li>
         <li><a href="#">Subscribe</a></li>
-        <li>Have an account?<a href="#">Sign in</a></li>
+        <li>Have an account? <a href="#">Sign in</a></li>
         <li></li>
       </ul>
       <ul>

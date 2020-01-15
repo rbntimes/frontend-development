@@ -76,15 +76,12 @@ for (i = 0; i < buttons.length; i++) {
   if (buttons[i].innerText === 'Get started') {
     buttons[i].addEventListener('click', () => {
         document.querySelector('body').classList.add('modal')
-
         form.classList.add('active')
-
     })
   }
 }
 
 closeButton.addEventListener('click', () => {
   document.querySelector('body').classList.remove('modal')
-
   form.classList.remove('active')
 })
