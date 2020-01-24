@@ -1,12 +1,18 @@
 footer {
   background: black;
   padding: 2rem;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
   grid-column: 1 / 4;
   grid-row: 3 / 4;
   width: 100%;
-align-self: center;
-justify-self: center;
+  align-self: center;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
+footer * {
+    grid-column: 2 / 3;
 }
 
 footer a, footer p {
@@ -23,6 +29,10 @@ footer > svg {
   fill: white;
 }
 
+footer > h4 {
+  margin: 1rem 0 0;
+}
+
 footer > nav > ul {
   display: flex;
   list-style: none;
@@ -36,6 +46,21 @@ footer > nav > ul > li {
   margin-right: 0.5rem;
 }
 
-footer {
-  color: rgba(255, 255, 255, 0.6);
+/* Mobile */
+@media all and (max-width: 35rem) {
+  footer {
+    padding: 1rem;
+  }
+
+  footer > nav > ul {
+    display: flex;
+  }
+
+  footer > nav > ul > li {
+    margin: .5rem;
+  }
+
+  footer > nav > ul > li > a {
+    text-decoration: underline;
+  }
 }

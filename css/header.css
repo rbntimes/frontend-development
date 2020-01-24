@@ -1,23 +1,28 @@
 body > nav {
   position: fixed;
+  display: grid;
+  grid-template-columns: inherit;
   width: 100%;
-  padding: 1.1667rem 2rem;
-  height: 5.5rem;
+  padding: 1.1667rem 0;
+  height: 5rem;
   background: rgba(255, 255, 255, 0.95);
 }
-nav > ul {
+body > nav > ul {
   display: grid;
   grid-template-columns: 35px 10rem;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
+  grid-column: 2 / 3;
   padding: 0;
 }
 
-nav a {
-  width: 35px;
-  height: 35px;
+body > nav a {
+  width: 36px;
+  height: 36px;
+  display: flex;
 }
 
-nav li {
+/* Mobile */
+@media all and (max-width: 35rem) {
 }
