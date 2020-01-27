@@ -7,9 +7,9 @@ html {
 }
 body {
   font-size: 1.25em;
-  grid-template-rows: 4.125rem auto 25rem;
-  grid-template-columns: 2rem auto 2rem;
-  grid-row-gap: 1rem;
+  grid-template-rows: 4.125rem auto auto;
+  grid-template-columns: auto 55rem auto;
+  grid-row-gap: 2rem;
   display: grid;
   margin: 0;
 }
